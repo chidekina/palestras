@@ -13,4 +13,5 @@ Algumas delas deixo também links que me ajudaram na referência e a montar a mi
 - [O poder da IA via CLI (terminal)](https://www.canva.com/design/DAGuMryUDs0/EjzXttZPETJDHjVGqI7uBw/view?utm_content=DAGuMryUDs0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=haac6d5695d)
 - [Fluxo de Trabalho com IA](https://docs.google.com/presentation/d/11v6nt1G7OX9ZaWrX6efJSvGGI-R5vnRz/edit?usp=sharing&ouid=102910076569594156708&rtpof=true&sd=true)
 - [Introdução à Arquitetura de Software](https://canva.link/6txpwfq6yfbizyg)
+- [IA Generativa no Cenário Atual](https://canva.link/jsowgezouagsmr0)
 - [IA x NINA — Os dois lados da moeda da Inteligência Artificial](./ia-x-nina/PROJETO.md)
