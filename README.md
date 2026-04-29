@@ -14,4 +14,5 @@ Algumas delas deixo também links que me ajudaram na referência e a montar a mi
 - [Fluxo de Trabalho com IA](https://docs.google.com/presentation/d/11v6nt1G7OX9ZaWrX6efJSvGGI-R5vnRz/edit?usp=sharing&ouid=102910076569594156708&rtpof=true&sd=true)
 - [Introdução à Arquitetura de Software](https://canva.link/6txpwfq6yfbizyg)
 - [IA Generativa no Cenário Atual](https://canva.link/jsowgezouagsmr0)
+- [Ética, Segurança e Impacto Ambiental na IA Generativa](https://canva.link/z082utd09okjw4s)
 - [IA x NINA — Os dois lados da moeda da Inteligência Artificial](./ia-x-nina/PROJETO.md)
