@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #222831; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #222831; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #393E46; padding: 20pt 50pt; display: flex; align-items: center; gap: 14pt;
+}
+.header h1 { color: #F96D00; font-size: 22pt; margin: 0; }
+.header .num { color: #555; font-size: 13pt; }
+.body { display: flex; flex: 1; padding: 10pt 50pt; gap: 28pt; align-items: flex-start; }
+.left { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 4pt; gap: 8pt; }
+.left p.intro { color: #AAAAAA; font-size: 11.5pt; line-height: 1.5; margin: 0; }
+.concepts { display: flex; flex-direction: column; gap: 4pt; }
+.concept {
+  background: #2D333D; border-radius: 6pt; padding: 7pt 12pt;
+  display: flex; gap: 10pt; align-items: center;
+}
+.concept p.icon { font-size: 16pt; margin: 0; min-width: 22pt; text-align: center; }
+.concept-text h3 { color: #EEEEEE; font-size: 11pt; margin: 0 0 2pt 0; }
+.concept-text p { color: #AAAAAA; font-size: 10pt; margin: 0; line-height: 1.3; }
+.right { flex: 1.1; display: flex; flex-direction: column; justify-content: center; }
+.diagram { display: flex; flex-direction: column; gap: 0; align-items: center; }
+.orch-box {
+  background: #F96D00; border-radius: 8pt; padding: 9pt 20pt; text-align: center;
+}
+.orch-box p { color: #fff; font-size: 12pt; font-weight: bold; margin: 0; }
+.orch-box p.sub { font-size: 9.5pt; font-weight: normal; margin-top: 2pt; opacity: 0.85; }
+.arrow-down { color: #555; font-size: 13pt; line-height: 1; text-align: center; margin: 3pt 0; }
+.agents-row { display: flex; gap: 10pt; width: 100%; }
+.agent {
+  flex: 1; background: #2D333D; border-radius: 6pt; padding: 7pt 8pt;
+  text-align: center; border: 1pt solid #393E46;
+}
+.agent p.name { color: #EEEEEE; font-size: 10pt; font-weight: bold; margin: 0 0 2pt 0; }
+.agent p.role { color: #888; font-size: 9pt; margin: 0; }
+.agent p.icon { font-size: 14pt; margin: 0 0 3pt 0; }
+.tools-row { display: flex; gap: 8pt; width: 100%; }
+.tool {
+  flex: 1; background: #1A1E25; border-radius: 4pt; padding: 5pt 6pt;
+  text-align: center; border: 1pt solid #2D333D;
+}
+.tool p { color: #555; font-size: 8.5pt; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="num">08</p>
+  <h1>Orquestração de Agentes</h1>
+</div>
+<div class="body">
+  <div class="left">
+    <p class="intro">Orquestração é coordenar múltiplos agentes de IA para resolver tarefas complexas — cada um com escopo e ferramentas próprias.</p>
+    <div class="concepts">
+      <div class="concept">
+        <p class="icon">🎯</p>
+        <div class="concept-text">
+          <h3>Orquestrador</h3>
+          <p>Recebe a tarefa principal, decompõe e delega para sub-agentes.</p>
+        </div>
+      </div>
+      <div class="concept">
+        <p class="icon">🤖</p>
+        <div class="concept-text">
+          <h3>Sub-agente</h3>
+          <p>Especialista em uma tarefa única. Retorna resultado estruturado.</p>
+        </div>
+      </div>
+      <div class="concept">
+        <p class="icon">🔧</p>
+        <div class="concept-text">
+          <h3>Tools</h3>
+          <p>Funções que o agente pode invocar: bash, read, search, API calls.</p>
+        </div>
+      </div>
+      <div class="concept">
+        <p class="icon">📋</p>
+        <div class="concept-text">
+          <h3>Context window</h3>
+          <p>Cada agente tem memória limitada — sub-agentes protegem o contexto principal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="diagram">
+      <div class="orch-box">
+        <p>Orquestrador</p>
+        <p class="sub">"implemente a feature X com TDD"</p>
+      </div>
+      <p class="arrow-down">↓ &nbsp; delega &nbsp; ↓</p>
+      <div class="agents-row">
+        <div class="agent">
+          <p class="icon">🔍</p>
+          <p class="name">Researcher</p>
+          <p class="role">Explora codebase</p>
+        </div>
+        <div class="agent">
+          <p class="icon">🧪</p>
+          <p class="name">Test Writer</p>
+          <p class="role">Gera testes TDD</p>
+        </div>
+        <div class="agent">
+          <p class="icon">⚙️</p>
+          <p class="name">Implementer</p>
+          <p class="role">Escreve o código</p>
+        </div>
+        <div class="agent">
+          <p class="icon">🔎</p>
+          <p class="name">Reviewer</p>
+          <p class="role">Code review</p>
+        </div>
+      </div>
+      <p class="arrow-down">↓ &nbsp; usa tools &nbsp; ↓</p>
+      <div class="tools-row">
+        <div class="tool"><p>Read / Write</p></div>
+        <div class="tool"><p>Bash / Grep</p></div>
+        <div class="tool"><p>WebSearch</p></div>
+        <div class="tool"><p>MCP servers</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

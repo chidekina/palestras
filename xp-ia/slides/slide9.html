@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #222831; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #222831; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #393E46; padding: 20pt 50pt; display: flex; align-items: center; gap: 14pt;
+}
+.header h1 { color: #F96D00; font-size: 22pt; margin: 0; }
+.header .num { color: #555; font-size: 13pt; }
+.live-badge {
+  background: #E74C3C; border-radius: 4pt; padding: 3pt 10pt;
+  display: flex; align-items: center; gap: 6pt; margin-left: auto;
+}
+.live-badge p { color: #fff; font-size: 10pt; font-weight: bold; margin: 0; letter-spacing: 1pt; }
+.body { display: flex; flex: 1; padding: 20pt 50pt; gap: 24pt; }
+.left { flex: 1.1; display: flex; flex-direction: column; gap: 10pt; justify-content: center; }
+.scenario {
+  background: #2D333D; border-radius: 6pt; padding: 14pt 16pt;
+  border-left: 5pt solid #F96D00;
+}
+.scenario p.title { color: #F96D00; font-size: 11pt; font-weight: bold; letter-spacing: 1pt; margin: 0 0 8pt 0; }
+.scenario p.desc { color: #EEEEEE; font-size: 13pt; margin: 0; line-height: 1.4; }
+.steps { display: flex; flex-direction: column; gap: 8pt; }
+.step { display: flex; gap: 10pt; align-items: flex-start; }
+.dot { width: 22pt; height: 22pt; background: #393E46; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1pt; }
+.dot p { color: #F96D00; font-size: 10pt; font-weight: bold; margin: 0; text-align: center; }
+.step-body p { color: #AAAAAA; font-size: 11pt; margin: 0; line-height: 1.4; }
+.step-body p strong { color: #EEEEEE; }
+.right { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.terminal {
+  background: #0D1117; border: 1pt solid #30363D; border-radius: 8pt; overflow: hidden;
+}
+.term-bar { background: #161B22; padding: 8pt 14pt; display: flex; gap: 6pt; align-items: center; }
+.term-dot { width: 10pt; height: 10pt; border-radius: 50%; }
+.td1 { background: #E74C3C; }
+.td2 { background: #F39C12; }
+.td3 { background: #2ECC71; }
+.term-title { color: #555; font-size: 9pt; margin-left: 8pt; }
+.term-body { padding: 14pt 16pt; font-family: "Courier New", monospace; }
+.term-body p { font-size: 9.5pt; margin: 0; line-height: 1.6; }
+.prompt { color: #2ECC71; }
+.cmd { color: #EEEEEE; }
+.out { color: #888; }
+.out-ok { color: #2ECC71; }
+.out-ai { color: #9CDCFE; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="num">07</p>
+  <h1>Live Coding — XP + IA em ação</h1>
+  <div class="live-badge"><p>⬤ LIVE</p></div>
+</div>
+<div class="body">
+  <div class="left">
+    <div class="scenario">
+      <p class="title">CENÁRIO</p>
+      <p class="desc">Implementar <strong>calculateDiscount()</strong> do zero com TDD + IA como pair.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="dot"><p>1</p></div>
+        <div class="step-body"><p><strong>Dev escreve o describe()</strong> — declara intenção do teste</p></div>
+      </div>
+      <div class="step">
+        <div class="dot"><p>2</p></div>
+        <div class="step-body"><p><strong>IA gera os it() blocks</strong> — edge cases incluídos</p></div>
+      </div>
+      <div class="step">
+        <div class="dot"><p>3</p></div>
+        <div class="step-body"><p><strong>Red</strong> — testes falham, comportamento esperado</p></div>
+      </div>
+      <div class="step">
+        <div class="dot"><p>4</p></div>
+        <div class="step-body"><p><strong>IA implementa Green</strong> — dev faz code review</p></div>
+      </div>
+      <div class="step">
+        <div class="dot"><p>5</p></div>
+        <div class="step-body"><p><strong>IA refatora</strong> — dev aprova o PR da IA</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="terminal">
+      <div class="term-bar">
+        <div class="term-dot td1"></div>
+        <div class="term-dot td2"></div>
+        <div class="term-dot td3"></div>
+        <p class="term-title">terminal</p>
+      </div>
+      <div class="term-body">
+        <p><span class="prompt">$</span> <span class="cmd">bun run test --watch</span></p>
+        <p>&nbsp;</p>
+        <p><span class="out">SUITE calculateDiscount</span></p>
+        <p><span class="out">  ✕ when price is negative</span></p>
+        <p><span class="out">  ✕ when tier is undefined</span></p>
+        <p><span class="out">  ✕ when discount exceeds 100%</span></p>
+        <p>&nbsp;</p>
+        <p><span class="out-ai">🤖 IA: implementando cobertura...</span></p>
+        <p>&nbsp;</p>
+        <p><span class="out-ok">  ✓ when price is negative (3ms)</span></p>
+        <p><span class="out-ok">  ✓ when tier is undefined (1ms)</span></p>
+        <p><span class="out-ok">  ✓ when discount exceeds 100% (2ms)</span></p>
+        <p><span class="out-ok">Tests: 3 passed (3)</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

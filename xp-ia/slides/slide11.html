@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #222831; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #222831; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #393E46; padding: 20pt 50pt; display: flex; align-items: center; gap: 14pt;
+}
+.header h1 { color: #F96D00; font-size: 22pt; margin: 0; }
+.header .num { color: #555; font-size: 13pt; }
+.live-badge {
+  background: #E74C3C; border-radius: 4pt; padding: 3pt 10pt; margin-left: auto;
+}
+.live-badge p { color: #fff; font-size: 10pt; font-weight: bold; margin: 0; letter-spacing: 1pt; }
+.body { display: flex; flex: 1; padding: 10pt 50pt; gap: 24pt; }
+.left { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; gap: 6pt; }
+.left p.label { color: #F96D00; font-size: 9.5pt; font-weight: bold; letter-spacing: 1pt; margin: 0 0 2pt 0; }
+.anatomy { display: flex; flex-direction: column; gap: 5pt; }
+.piece {
+  background: #2D333D; border-radius: 5pt; padding: 7pt 12pt;
+  display: flex; align-items: flex-start; gap: 10pt;
+}
+.piece p.key { color: #F96D00; font-size: 10.5pt; font-weight: bold; margin: 0; min-width: 72pt; }
+.piece p.val { color: #AAAAAA; font-size: 10.5pt; margin: 0; line-height: 1.3; }
+.piece p.val strong { color: #EEEEEE; }
+.xp-link {
+  background: #393E46; border-radius: 5pt; padding: 7pt 12pt; margin-top: 2pt;
+}
+.xp-link p { color: #AAAAAA; font-size: 10pt; margin: 0; line-height: 1.4; }
+.xp-link p strong { color: #F96D00; }
+.right { flex: 1.1; display: flex; flex-direction: column; justify-content: center; }
+.code-block {
+  background: #0D1117; border: 1pt solid #30363D; border-radius: 8pt;
+  padding: 10pt 14pt; font-family: "Courier New", monospace;
+}
+.code-block p { font-size: 8.5pt; margin: 0; line-height: 1.55; }
+.cm { color: #6A9955; }
+.kw { color: #C586C0; }
+.fn { color: #DCDCAA; }
+.str { color: #CE9178; }
+.ty { color: #4EC9B0; }
+.id { color: #9CDCFE; }
+.pu { color: #EEEEEE; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="num">09</p>
+  <h1>Criando um Agente — Anatomia + Demo</h1>
+  <div class="live-badge"><p>⬤ LIVE</p></div>
+</div>
+<div class="body">
+  <div class="left">
+    <p class="label">ANATOMIA DE UM AGENTE</p>
+    <div class="anatomy">
+      <div class="piece">
+        <p class="key">Role</p>
+        <p class="val">Quem o agente é. Define tom e especialidade. <strong>Seja específico.</strong></p>
+      </div>
+      <div class="piece">
+        <p class="key">Goal</p>
+        <p class="val">O que ele deve entregar. <strong>Uma responsabilidade só.</strong></p>
+      </div>
+      <div class="piece">
+        <p class="key">Tools</p>
+        <p class="val">Funções que pode invocar. <strong>Princípio do menor privilégio.</strong></p>
+      </div>
+      <div class="piece">
+        <p class="key">Constraints</p>
+        <p class="val">O que ele <strong>não</strong> pode fazer. Evita alucinação e escopo rastejante.</p>
+      </div>
+      <div class="piece">
+        <p class="key">Output</p>
+        <p class="val">Formato estruturado. <strong>JSON ou Markdown — nunca texto livre.</strong></p>
+      </div>
+    </div>
+    <div class="xp-link">
+      <p><strong>XP aqui:</strong> Single Responsibility + testes de contrato no output do agente = TDD para IA.</p>
+    </div>
+  </div>
+  <div class="right">
+    <div class="code-block">
+      <p class="cm">// Agente de code review — Claude SDK</p>
+      <p><span class="kw">const</span> <span class="id">agent</span> <span class="pu">=</span> <span class="kw">await</span> <span class="id">anthropic</span><span class="pu">.</span><span class="fn">messages</span><span class="pu">.</span><span class="fn">create</span><span class="pu">({</span></p>
+      <p>&nbsp;&nbsp;<span class="id">model</span><span class="pu">:</span> <span class="str">"claude-sonnet-4-6"</span><span class="pu">,</span></p>
+      <p>&nbsp;&nbsp;<span class="id">system</span><span class="pu">:</span> <span class="str">`</span></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">You are a senior code reviewer.</span></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">Focus ONLY on: security, tests, naming.</span></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">Return JSON: { issues[], score, verdict }</span></p>
+      <p>&nbsp;&nbsp;<span class="str">`</span><span class="pu">,</span></p>
+      <p>&nbsp;&nbsp;<span class="id">tools</span><span class="pu">: [</span></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="pu">{ </span><span class="id">name</span><span class="pu">:</span> <span class="str">"read_file"</span><span class="pu">,</span> <span class="id">description</span><span class="pu">:</span> <span class="str">"..."</span> <span class="pu">},</span></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="pu">{ </span><span class="id">name</span><span class="pu">:</span> <span class="str">"search_pattern"</span><span class="pu">,</span> <span class="id">description</span><span class="pu">:</span> <span class="str">"..."</span> <span class="pu">}</span></p>
+      <p>&nbsp;&nbsp;<span class="pu">],</span></p>
+      <p>&nbsp;&nbsp;<span class="id">messages</span><span class="pu">: [{</span></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="id">role</span><span class="pu">:</span> <span class="str">"user"</span><span class="pu">,</span></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="id">content</span><span class="pu">:</span> <span class="str">`Review: </span><span class="pu">${</span><span class="id">diff</span><span class="pu">}</span><span class="str">`</span></p>
+      <p>&nbsp;&nbsp;<span class="pu">}]</span></p>
+      <p><span class="pu">})</span></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

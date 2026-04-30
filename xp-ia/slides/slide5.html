@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #222831; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #222831; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #393E46; padding: 20pt 50pt; display: flex; align-items: center;
+}
+.header h1 { color: #F96D00; font-size: 22pt; margin: 0; }
+.header .num { color: #555; font-size: 13pt; margin-right: 16pt; }
+.body { display: flex; flex: 1; padding: 24pt 50pt; gap: 30pt; align-items: stretch; }
+.left { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 10pt; }
+.cycle {
+  display: flex; align-items: center; gap: 0;
+  background: #2D333D; border-radius: 8pt; padding: 14pt 16pt;
+}
+.cycle-step { flex: 1; text-align: center; }
+.cycle-step p.label { color: #888; font-size: 9pt; letter-spacing: 1pt; margin: 0 0 4pt 0; }
+.cycle-step p.name { font-size: 13pt; font-weight: bold; margin: 0; }
+.red { color: #E74C3C; }
+.green { color: #2ECC71; }
+.orange { color: #F96D00; }
+.arrow { color: #555; font-size: 18pt; padding: 0 8pt; }
+.insight {
+  background: #2D333D; border-radius: 6pt; padding: 14pt 18pt;
+}
+.insight p.title { color: #F96D00; font-size: 11pt; font-weight: bold; letter-spacing: 1pt; margin: 0 0 8pt 0; }
+.insight ul { margin: 0; padding-left: 16pt; }
+.insight li { color: #AAAAAA; font-size: 11pt; line-height: 1.5; }
+.right { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.code-block {
+  background: #1A1E25; border: 1pt solid #393E46; border-radius: 6pt;
+  padding: 14pt 18pt; font-family: "Courier New", monospace;
+}
+.code-block p.comment { color: #6A9955; font-size: 9.5pt; margin: 0 0 4pt 0; }
+.code-block p.code { color: #9CDCFE; font-size: 9.5pt; margin: 0; line-height: 1.5; }
+.code-block p.code .kw { color: #C586C0; }
+.code-block p.code .str { color: #CE9178; }
+.code-block p.code .fn { color: #DCDCAA; }
+.badge {
+  background: #F96D00; border-radius: 4pt; padding: 6pt 14pt; margin-top: 12pt; display: inline-block;
+}
+.badge p { color: #fff; font-size: 11pt; font-weight: bold; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="num">04</p>
+  <h1>TDD com IA — Red, Green, Refactor em velocidade</h1>
+</div>
+<div class="body">
+  <div class="left">
+    <div class="cycle">
+      <div class="cycle-step">
+        <p class="label">FASE 1</p>
+        <p class="name red">🔴 Red</p>
+      </div>
+      <p class="arrow">→</p>
+      <div class="cycle-step">
+        <p class="label">FASE 2</p>
+        <p class="name green">🟢 Green</p>
+      </div>
+      <p class="arrow">→</p>
+      <div class="cycle-step">
+        <p class="label">FASE 3</p>
+        <p class="name orange">♻️ Refactor</p>
+      </div>
+    </div>
+    <div class="insight">
+      <p class="title">O QUE A IA MUDA</p>
+      <ul>
+        <li>IA gera casos de teste que dev esqueceria</li>
+        <li>Dev valida e aprova — não abdica ownership</li>
+        <li>IA refatora o Green para Clean Code</li>
+        <li>Dev faz code review da IA como faria de um par</li>
+      </ul>
+    </div>
+  </div>
+  <div class="right">
+    <div class="code-block">
+      <p class="comment">// Dev escreve o que quer testar</p>
+      <p class="code"><span class="fn">describe</span>(<span class="str">'when price is negative'</span>, () =&gt; {</p>
+      <p class="code">&nbsp;&nbsp;<span class="comment">// 🤖 IA gera os it() blocks:</span></p>
+      <p class="code">&nbsp;&nbsp;<span class="fn">it</span>(<span class="str">'should throw InvalidPriceError'</span>, () =&gt; {</p>
+      <p class="code">&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">expect</span>(() =&gt; <span class="fn">calculateDiscount</span>(-10, <span class="str">'gold'</span>))</p>
+      <p class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<span class="fn">toThrow</span>(InvalidPriceError)</p>
+      <p class="code">&nbsp;&nbsp;})</p>
+      <p class="code">&nbsp;&nbsp;<span class="fn">it</span>(<span class="str">'should not apply any discount'</span>, () =&gt; {</p>
+      <p class="code">&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// ...</span></p>
+      <p class="code">&nbsp;&nbsp;})</p>
+      <p class="code">})</p>
+    </div>
+    <div class="badge"><p>Dev escreve describe → IA preenche os it()</p></div>
+  </div>
+</div>
+</body>
+</html>

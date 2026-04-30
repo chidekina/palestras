@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #222831; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #222831; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #393E46; padding: 20pt 50pt; display: flex; align-items: center;
+}
+.header h1 { color: #F96D00; font-size: 22pt; margin: 0; }
+.header .num { color: #555; font-size: 13pt; margin-right: 16pt; }
+.body { display: flex; flex: 1; padding: 14pt 50pt; gap: 30pt; align-items: center; }
+.left { flex: 1; display: flex; flex-direction: column; gap: 12pt; }
+.rule {
+  display: flex; gap: 14pt; align-items: flex-start;
+  background: #2D333D; border-radius: 6pt; padding: 9pt 14pt;
+}
+.icon { color: #F96D00; font-size: 22pt; line-height: 1; min-width: 26pt; }
+.rule-text h3 { color: #EEEEEE; font-size: 13pt; margin: 0 0 4pt 0; }
+.rule-text p { color: #AAAAAA; font-size: 11pt; margin: 0; line-height: 1.3; }
+.right { flex: 1.1; display: flex; flex-direction: column; gap: 12pt; justify-content: center; }
+.before-after {
+  background: #2D333D; border-radius: 6pt; overflow: hidden;
+}
+.ba-header { background: #393E46; padding: 8pt 16pt; display: flex; gap: 20pt; }
+.ba-header p { font-size: 10pt; font-weight: bold; letter-spacing: 1pt; margin: 0; }
+.ba-before { color: #E74C3C; }
+.ba-after { color: #2ECC71; }
+.ba-body { padding: 12pt 16pt; font-family: "Courier New", monospace; }
+.ba-body p { font-size: 9.5pt; margin: 0; line-height: 1.5; }
+.bad { color: #E74C3C; }
+.good { color: #2ECC71; }
+.neutral { color: #9CDCFE; }
+.warning {
+  background: #2D333D; border-left: 5pt solid #E74C3C;
+  padding: 12pt 16pt; border-radius: 4pt;
+}
+.warning p { color: #AAAAAA; font-size: 11pt; margin: 0; line-height: 1.4; }
+.warning p strong { color: #E74C3C; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="num">05</p>
+  <h1>Refatoração Contínua + Clean Code com IA</h1>
+</div>
+<div class="body">
+  <div class="left">
+    <div class="rule">
+      <p class="icon">⚡</p>
+      <div class="rule-text">
+        <h3>IA refatora o Green</h3>
+        <p>Após o teste passar, IA aplica Extract Method, renomeia variáveis, remove duplicações.</p>
+      </div>
+    </div>
+    <div class="rule">
+      <p class="icon">🔍</p>
+      <div class="rule-text">
+        <h3>Code Review da IA</h3>
+        <p>Trate a saída da IA como pull request. Review obrigatório antes de aceitar.</p>
+      </div>
+    </div>
+    <div class="rule">
+      <p class="icon">🚫</p>
+      <div class="rule-text">
+        <h3>IA não testa por você</h3>
+        <p>Testes gerados por IA precisam cobrir casos de negócio, não apenas happy path.</p>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="before-after">
+      <div class="ba-header">
+        <p class="ba-before">ANTES (gerado pela IA)</p>
+        <p class="ba-after">DEPOIS (refatorado)</p>
+      </div>
+      <div class="ba-body">
+        <p class="bad">// x é o preço com desconto</p>
+        <p class="bad">const x = p * (1 - RATES[t])</p>
+        <p>&nbsp;</p>
+        <p class="good">const discountRate = TIER_RATES[tier]</p>
+        <p class="good">const discountedPrice = price * (1 - discountRate)</p>
+      </div>
+    </div>
+    <div class="warning">
+      <p><strong>Atenção:</strong> IA gera código que compila mas não comunica intenção. Clean Code ainda é responsabilidade do dev.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

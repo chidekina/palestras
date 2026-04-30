@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #222831; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #222831; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #393E46; padding: 20pt 50pt; display: flex; align-items: center;
+}
+.header h1 { color: #F96D00; font-size: 22pt; margin: 0; }
+.header .num { color: #555; font-size: 13pt; margin-right: 16pt; }
+.body { display: flex; flex: 1; padding: 24pt 50pt; gap: 0; align-items: center; }
+.matrix { display: flex; flex-direction: column; flex: 1; gap: 0; }
+.matrix-row { display: flex; gap: 10pt; margin-bottom: 10pt; }
+.cell {
+  flex: 1; background: #2D333D; border-radius: 6pt; padding: 14pt 16pt;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.cell.highlight { background: #F96D00; }
+.cell.header-cell { background: #393E46; }
+.cell p.label { color: #888; font-size: 9pt; letter-spacing: 1pt; margin: 0 0 5pt 0; }
+.cell p.title { color: #EEEEEE; font-size: 12pt; font-weight: bold; margin: 0 0 4pt 0; }
+.cell p.desc { color: #AAAAAA; font-size: 10.5pt; margin: 0; line-height: 1.3; }
+.cell.highlight p.title { color: #FFFFFF; }
+.cell.highlight p.desc { color: rgba(255,255,255,0.8); }
+.cell.header-cell p.title { color: #F96D00; font-size: 13pt; }
+.side { flex: 0 0 160pt; display: flex; flex-direction: column; justify-content: center; gap: 12pt; margin-left: 24pt; }
+.stat { background: #2D333D; border-radius: 6pt; padding: 14pt; text-align: center; }
+.stat p.num { color: #F96D00; font-size: 28pt; font-weight: bold; margin: 0; line-height: 1; }
+.stat p.label { color: #AAAAAA; font-size: 10pt; margin: 4pt 0 0 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="num">06</p>
+  <h1>XP + IA — O Novo Padrão de Engenharia</h1>
+</div>
+<div class="body">
+  <div class="matrix">
+    <div class="matrix-row">
+      <div class="cell header-cell">
+        <p class="title">Prática XP</p>
+      </div>
+      <div class="cell header-cell">
+        <p class="title">XP clássico</p>
+      </div>
+      <div class="cell header-cell">
+        <p class="title">XP + IA</p>
+      </div>
+    </div>
+    <div class="matrix-row">
+      <div class="cell">
+        <p class="title">Pair Programming</p>
+      </div>
+      <div class="cell">
+        <p class="desc">2 devs, 1 teclado</p>
+      </div>
+      <div class="cell highlight">
+        <p class="desc">1 dev + IA disponível 24/7</p>
+      </div>
+    </div>
+    <div class="matrix-row">
+      <div class="cell">
+        <p class="title">TDD</p>
+      </div>
+      <div class="cell">
+        <p class="desc">Dev escreve todos os testes</p>
+      </div>
+      <div class="cell highlight">
+        <p class="desc">IA propõe, dev aprova e expande</p>
+      </div>
+    </div>
+    <div class="matrix-row">
+      <div class="cell">
+        <p class="title">Refatoração</p>
+      </div>
+      <div class="cell">
+        <p class="desc">Manual, pós Green</p>
+      </div>
+      <div class="cell highlight">
+        <p class="desc">IA aplica Extract/Rename, dev valida</p>
+      </div>
+    </div>
+  </div>
+  <div class="side">
+    <div class="stat">
+      <p class="num">3x</p>
+      <p class="label">mais contexto capturado em pair com IA</p>
+    </div>
+    <div class="stat">
+      <p class="num">↑</p>
+      <p class="label">cobertura de testes com AI-assisted TDD</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

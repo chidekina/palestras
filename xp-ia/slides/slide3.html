@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #222831; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #222831; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #393E46; padding: 20pt 50pt; display: flex; align-items: center;
+}
+.header h1 { color: #F96D00; font-size: 22pt; margin: 0; }
+.header .num { color: #555; font-size: 13pt; margin-right: 16pt; }
+.body { display: flex; flex: 1; padding: 28pt 50pt; gap: 30pt; align-items: center; }
+.left { flex: 1; }
+.left h2 { color: #EEEEEE; font-size: 20pt; margin: 0 0 14pt 0; line-height: 1.3; }
+.left p { color: #AAAAAA; font-size: 13pt; line-height: 1.6; margin: 0; }
+.right { flex: 1; display: flex; flex-direction: column; gap: 10pt; }
+.row { display: flex; gap: 10pt; }
+.practice {
+  flex: 1; background: #2D333D; border-radius: 6pt;
+  padding: 16pt 14pt; text-align: center;
+}
+.practice p.label { color: #888; font-size: 9pt; letter-spacing: 1pt; margin: 0 0 6pt 0; }
+.practice p.value { color: #F96D00; font-size: 14pt; font-weight: bold; margin: 0; line-height: 1.2; }
+.practice p.desc { color: #AAAAAA; font-size: 10pt; margin: 6pt 0 0 0; }
+.highlight {
+  background: #F96D00; border-radius: 6pt; padding: 14pt 18pt; margin-top: 4pt;
+}
+.highlight p { color: #FFFFFF; font-size: 12pt; font-weight: bold; margin: 0; text-align: center; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="num">02</p>
+  <h1>O que acontece quando a IA entra no loop?</h1>
+</div>
+<div class="body">
+  <div class="left">
+    <h2>"Se algo é bom,<br>faça o tempo todo."</h2>
+    <p>O XP identificou práticas que funcionam e tornou-as obrigatórias. A IA não muda esse princípio — ela o amplifica. Cada prática XP ganha um par artificial, disponível 24/7, sem ego, sem fadiga.</p>
+  </div>
+  <div class="right">
+    <div class="row">
+      <div class="practice">
+        <p class="label">ANTES</p>
+        <p class="value">1 dev<br>+ 1 dev</p>
+        <p class="desc">Pair Programming</p>
+      </div>
+      <div class="practice">
+        <p class="label">AGORA</p>
+        <p class="value">1 dev<br>+ 1 IA</p>
+        <p class="desc">AI-Assisted Pair</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="practice">
+        <p class="label">ANTES</p>
+        <p class="value">Red → Green<br>→ Refactor</p>
+        <p class="desc">TDD manual</p>
+      </div>
+      <div class="practice">
+        <p class="label">AGORA</p>
+        <p class="value">IA gera<br>→ dev valida</p>
+        <p class="desc">AI-assisted TDD</p>
+      </div>
+    </div>
+    <div class="highlight">
+      <p>A disciplina XP impede que a IA gere caos</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
