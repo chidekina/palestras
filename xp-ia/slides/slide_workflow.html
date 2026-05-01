@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #222831; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #222831; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: #393E46; padding: 20pt 50pt; display: flex; align-items: center; gap: 14pt; }
+.header h1 { color: #F96D00; font-size: 22pt; margin: 0; }
+.header .num { color: #555; font-size: 13pt; }
+.body { display: flex; flex: 1; padding: 18pt 50pt; gap: 16pt; align-items: center; }
+.pipeline { flex: 1; display: flex; flex-direction: column; gap: 8pt; }
+.pipeline p.label { color: #F96D00; font-size: 10pt; font-weight: bold; letter-spacing: 1.5pt; margin: 0 0 4pt 0; }
+.stages { display: flex; align-items: center; gap: 0; }
+.stage {
+  flex: 1; background: #2D333D; padding: 10pt 8pt;
+  text-align: center; position: relative;
+}
+.stage:first-child { border-radius: 6pt 0 0 6pt; }
+.stage:last-child { border-radius: 0 6pt 6pt 0; }
+.stage p.name { color: #EEEEEE; font-size: 10pt; font-weight: bold; margin: 0 0 3pt 0; }
+.stage p.sub { color: #888; font-size: 8.5pt; margin: 0; line-height: 1.3; }
+.stage-arrow { color: #555; font-size: 14pt; padding: 0 2pt; flex-shrink: 0; margin-top: -2pt; }
+.stage.active { background: #3A3010; border: 1pt solid #F96D00; }
+.stage.active p.name { color: #F96D00; }
+.tools-grid { flex: 1; display: flex; flex-direction: column; gap: 8pt; }
+.tools-grid p.label { color: #F96D00; font-size: 10pt; font-weight: bold; letter-spacing: 1.5pt; margin: 0 0 4pt 0; }
+.tools-row { display: flex; gap: 8pt; }
+.tool-card {
+  flex: 1; background: #2D333D; border-radius: 6pt; padding: 10pt 12pt;
+}
+.tool-card p.name { color: #EEEEEE; font-size: 11.5pt; font-weight: bold; margin: 0 0 3pt 0; }
+.tool-card p.role { color: #888; font-size: 9.5pt; margin: 0; line-height: 1.3; }
+.tool-card.orange { border-top: 3pt solid #F96D00; }
+.tool-card.blue { border-top: 3pt solid #3498DB; }
+.tool-card.green { border-top: 3pt solid #2ECC71; }
+.tool-card.purple { border-top: 3pt solid #9B59B6; }
+.tool-card.red { border-top: 3pt solid #E74C3C; }
+.tool-card.teal { border-top: 3pt solid #1ABC9C; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="num">11</p>
+  <h1>Nosso Workflow — Stack Completo</h1>
+</div>
+<div class="body">
+  <div class="pipeline">
+    <p class="label">PIPELINE DE DESENVOLVIMENTO</p>
+    <div class="stages">
+      <div class="stage active">
+        <p class="name">SDD</p>
+        <p class="sub">Spec-first</p>
+      </div>
+      <p class="stage-arrow">→</p>
+      <div class="stage active">
+        <p class="name">DDD</p>
+        <p class="sub">Domain model</p>
+      </div>
+      <p class="stage-arrow">→</p>
+      <div class="stage active">
+        <p class="name">TDD</p>
+        <p class="sub">Red/Green</p>
+      </div>
+      <p class="stage-arrow">→</p>
+      <div class="stage active">
+        <p class="name">BDD</p>
+        <p class="sub">describe/it</p>
+      </div>
+      <p class="stage-arrow">→</p>
+      <div class="stage active">
+        <p class="name">QA</p>
+        <p class="sub">Contrato + E2E</p>
+      </div>
+      <p class="stage-arrow">→</p>
+      <div class="stage">
+        <p class="name">Ship</p>
+        <p class="sub">CI/CD</p>
+      </div>
+    </div>
+    <div class="tools-row" style="margin-top: 6pt;">
+      <div class="tool-card orange">
+        <p class="name">GSD</p>
+        <p class="role">Planejamento de fases, execução e verificação de goals</p>
+      </div>
+      <div class="tool-card blue">
+        <p class="name">Claude Code</p>
+        <p class="role">CLI principal — agentes, skills, hooks, MCP servers</p>
+      </div>
+      <div class="tool-card green">
+        <p class="name">ARIA</p>
+        <p class="role">Briefing, tarefas, insights, infra health, relatórios</p>
+      </div>
+    </div>
+    <div class="tools-row">
+      <div class="tool-card purple">
+        <p class="name">Codex MCP</p>
+        <p class="role">Cirúrgico — bug fix, refactor pontual, rename de símbolo</p>
+      </div>
+      <div class="tool-card red">
+        <p class="name">Opencode</p>
+        <p class="role">Greenfield — módulos completos, CRUDs, test suites</p>
+      </div>
+      <div class="tool-card teal">
+        <p class="name">Skills</p>
+        <p class="role">Comportamentos injetáveis — TDD, debug, review, deploy</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

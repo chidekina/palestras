@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #222831; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #222831; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: #393E46; padding: 20pt 50pt; display: flex; align-items: center; gap: 14pt; }
+.header h1 { color: #F96D00; font-size: 22pt; margin: 0; }
+.header .num { color: #555; font-size: 13pt; }
+.body { display: flex; flex: 1; padding: 12pt 50pt; gap: 24pt; align-items: flex-start; }
+.left { flex: 1; display: flex; flex-direction: column; gap: 10pt; }
+.left p.intro { color: #AAAAAA; font-size: 12pt; line-height: 1.5; margin: 0; }
+.analogy {
+  background: #2D333D; border-radius: 6pt; padding: 12pt 14pt;
+  border-left: 5pt solid #F96D00;
+}
+.analogy p { color: #EEEEEE; font-size: 12pt; line-height: 1.5; margin: 0; }
+.analogy p span { color: #F96D00; font-weight: bold; }
+.how { display: flex; flex-direction: column; gap: 7pt; }
+.how-step { display: flex; gap: 10pt; align-items: flex-start; }
+.how-step p.num { color: #F96D00; font-size: 13pt; font-weight: bold; min-width: 18pt; margin: 0; }
+.how-step p.text { color: #AAAAAA; font-size: 11pt; margin: 0; line-height: 1.3; }
+.how-step p.text strong { color: #EEEEEE; }
+.right { flex: 1; display: flex; flex-direction: column; gap: 8pt; }
+.right p.label { color: #F96D00; font-size: 10pt; font-weight: bold; letter-spacing: 1pt; margin: 0; }
+.skills-grid { display: flex; flex-direction: column; gap: 5pt; }
+.skill-row { display: flex; gap: 6pt; }
+.skill {
+  flex: 1; background: #2D333D; border-radius: 5pt;
+  padding: 7pt 10pt; text-align: center;
+}
+.skill p.name { color: #EEEEEE; font-size: 10pt; font-weight: bold; margin: 0 0 2pt 0; }
+.skill p.cat { color: #666; font-size: 8.5pt; margin: 0; }
+.skill.proc { border-top: 2pt solid #F96D00; }
+.skill.impl { border-top: 2pt solid #3498DB; }
+.skill.qa-s { border-top: 2pt solid #2ECC71; }
+.skill.tool { border-top: 2pt solid #9B59B6; }
+.legend-row { display: flex; gap: 12pt; margin-top: 4pt; flex-wrap: wrap; }
+.legend-item { display: flex; align-items: center; gap: 5pt; }
+.ldot { width: 10pt; height: 3pt; border-radius: 2pt; }
+.lo { background: #F96D00; }
+.lb { background: #3498DB; }
+.lg { background: #2ECC71; }
+.lp { background: #9B59B6; }
+.legend-item p { color: #666; font-size: 8.5pt; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="num">13</p>
+  <h1>Skills — Comportamentos Injetáveis</h1>
+</div>
+<div class="body">
+  <div class="left">
+    <p class="intro">Skills são instruções especializadas que modificam o comportamento do agente IA para uma tarefa específica — carregadas sob demanda via <code>/skill-name</code>.</p>
+    <div class="analogy">
+      <p>É como um <span>playbook de XP</span> que o dev injeta no agente antes de começar uma tarefa.</p>
+    </div>
+    <div class="how">
+      <div class="how-step">
+        <p class="num">1</p>
+        <p class="text"><strong>Dev invoca</strong> a skill antes de qualquer ação — ex: <strong>/gsd:plan-phase</strong></p>
+      </div>
+      <div class="how-step">
+        <p class="num">2</p>
+        <p class="text"><strong>Skill carrega</strong> contexto específico: checklist, regras, ferramentas</p>
+      </div>
+      <div class="how-step">
+        <p class="num">3</p>
+        <p class="text"><strong>Agente segue</strong> o fluxo da skill como um pair seguiria um processo XP</p>
+      </div>
+      <div class="how-step">
+        <p class="num">4</p>
+        <p class="text"><strong>Skills rígidas</strong> (TDD, debug): siga exato. <strong>Flexíveis</strong> (patterns): adapte</p>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <p class="label">CATÁLOGO — EXEMPLOS</p>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <div class="skill proc"><p class="name">tdd</p><p class="cat">Processo</p></div>
+        <div class="skill proc"><p class="name">systematic-debugging</p><p class="cat">Processo</p></div>
+        <div class="skill proc"><p class="name">brainstorming</p><p class="cat">Processo</p></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill impl"><p class="name">gsd:plan-phase</p><p class="cat">GSD</p></div>
+        <div class="skill impl"><p class="name">gsd:execute-phase</p><p class="cat">GSD</p></div>
+        <div class="skill impl"><p class="name">gsd:ship</p><p class="cat">GSD</p></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill qa-s"><p class="name">code-reviewer</p><p class="cat">Qualidade</p></div>
+        <div class="skill qa-s"><p class="name">security</p><p class="cat">Qualidade</p></div>
+        <div class="skill qa-s"><p class="name">gsd:verify-work</p><p class="cat">Qualidade</p></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill tool"><p class="name">aria</p><p class="cat">Assistente</p></div>
+        <div class="skill tool"><p class="name">frontend-design</p><p class="cat">UI/UX</p></div>
+        <div class="skill tool"><p class="name">pptx</p><p class="cat">Tooling</p></div>
+      </div>
+    </div>
+    <div class="legend-row">
+      <div class="legend-item"><div class="ldot lo"></div><p>Processo</p></div>
+      <div class="legend-item"><div class="ldot lb"></div><p>GSD</p></div>
+      <div class="legend-item"><div class="ldot lg"></div><p>Qualidade</p></div>
+      <div class="legend-item"><div class="ldot lp"></div><p>Tooling</p></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

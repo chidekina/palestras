@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #222831; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #222831; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: #393E46; padding: 20pt 50pt; display: flex; align-items: center; gap: 14pt; }
+.header h1 { color: #F96D00; font-size: 22pt; margin: 0; }
+.header .num { color: #555; font-size: 13pt; }
+.body { display: flex; flex: 1; padding: 18pt 42pt; gap: 20pt; align-items: stretch; }
+.left { flex: 1.3; display: flex; flex-direction: column; justify-content: center; gap: 8pt; }
+.left p.intro { color: #AAAAAA; font-size: 11.5pt; line-height: 1.5; margin: 0 0 4pt 0; }
+.loop { display: flex; gap: 10pt; align-items: center; }
+.loop-label-col { flex: 0 0 130pt; }
+.loop-label-col p.name { color: #EEEEEE; font-size: 11pt; font-weight: bold; margin: 0; }
+.loop-label-col p.time { color: #666; font-size: 9.5pt; margin: 0; }
+.bar-col { flex: 1; }
+.bar-track { background: #1A1E25; border-radius: 3pt; height: 22pt; position: relative; overflow: hidden; }
+.bar-fill {
+  height: 22pt; border-radius: 3pt;
+  display: flex; align-items: center; padding-left: 10pt;
+}
+.bar-fill p { font-size: 9pt; font-weight: bold; color: rgba(255,255,255,0.9); margin: 0; white-space: nowrap; }
+.f1 { width: 12%; background: #F96D00; }
+.f2 { width: 26%; background: #E67E22; }
+.f3 { width: 48%; background: #D35400; }
+.f4 { width: 70%; background: #C0392B; }
+.f5 { width: 90%; background: #922B21; }
+.right { flex: 0 0 200pt; display: flex; flex-direction: column; gap: 10pt; justify-content: center; }
+.insight-box { background: #2D333D; border-radius: 6pt; padding: 12pt 14pt; }
+.insight-box p.title { color: #F96D00; font-size: 10pt; font-weight: bold; letter-spacing: 1pt; margin: 0 0 6pt 0; }
+.insight-box p.body { color: #AAAAAA; font-size: 11pt; line-height: 1.4; margin: 0; }
+.insight-box p.body strong { color: #EEEEEE; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="num">04</p>
+  <h1>XP e os Ciclos de Feedback</h1>
+</div>
+<div class="body">
+  <div class="left">
+    <p class="intro">XP é sobre encurtar o tempo entre fazer algo errado e descobrir que está errado.</p>
+    <div class="loop">
+      <div class="loop-label-col">
+        <p class="name">Unit Test</p>
+        <p class="time">Red/Green/Refactor</p>
+      </div>
+      <div class="bar-col">
+        <div class="bar-track"><div class="bar-fill f1"><p>segundos</p></div></div>
+      </div>
+    </div>
+    <div class="loop">
+      <div class="loop-label-col">
+        <p class="name">Pair Programming</p>
+        <p class="time">Revisão em tempo real</p>
+      </div>
+      <div class="bar-col">
+        <div class="bar-track"><div class="bar-fill f2"><p>minutos</p></div></div>
+      </div>
+    </div>
+    <div class="loop">
+      <div class="loop-label-col">
+        <p class="name">CI / Build</p>
+        <p class="time">Test suite completa</p>
+      </div>
+      <div class="bar-col">
+        <div class="bar-track"><div class="bar-fill f3"><p>horas</p></div></div>
+      </div>
+    </div>
+    <div class="loop">
+      <div class="loop-label-col">
+        <p class="name">Iteration Review</p>
+        <p class="time">Demo + ajuste</p>
+      </div>
+      <div class="bar-col">
+        <div class="bar-track"><div class="bar-fill f4"><p>dias</p></div></div>
+      </div>
+    </div>
+    <div class="loop">
+      <div class="loop-label-col">
+        <p class="name">Release</p>
+        <p class="time">Feedback real de prod</p>
+      </div>
+      <div class="bar-col">
+        <div class="bar-track"><div class="bar-fill f5"><p>semanas</p></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="insight-box">
+      <p class="title">PRINCÍPIO</p>
+      <p class="body">Se o loop demora <strong>mais de 1 dia</strong>, algo está errado no processo.</p>
+    </div>
+    <div class="insight-box">
+      <p class="title">IA ENCURTA AINDA MAIS</p>
+      <p class="body">Review em <strong>segundos</strong>. Geração de testes em <strong>segundos</strong>. O loop de minutos vira segundos.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

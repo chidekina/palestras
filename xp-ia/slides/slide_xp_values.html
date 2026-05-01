@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #222831; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #222831; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: #393E46; padding: 20pt 50pt; display: flex; align-items: center; gap: 14pt; }
+.header h1 { color: #F96D00; font-size: 22pt; margin: 0; }
+.header .num { color: #555; font-size: 13pt; }
+.body { display: flex; flex: 1; padding: 20pt 50pt; gap: 14pt; align-items: center; }
+.intro { flex: 0 0 180pt; display: flex; flex-direction: column; justify-content: center; gap: 12pt; }
+.quote-wrap { border-left: 5pt solid #F96D00; padding-left: 14pt; }
+.intro p.quote { color: #EEEEEE; font-size: 13pt; font-style: italic; line-height: 1.5; margin: 0; }
+.intro p.by { color: #888; font-size: 10.5pt; margin: 0; }
+.values { flex: 1; display: flex; gap: 10pt; align-items: stretch; }
+.value {
+  flex: 1; background: #2D333D; border-radius: 8pt;
+  padding: 18pt 12pt; display: flex; flex-direction: column; align-items: center;
+  border-top: 4pt solid transparent;
+}
+.v1 { border-top-color: #F96D00; }
+.v2 { border-top-color: #3498DB; }
+.v3 { border-top-color: #2ECC71; }
+.v4 { border-top-color: #E74C3C; }
+.v5 { border-top-color: #9B59B6; }
+.value p.icon { font-size: 22pt; margin: 0 0 8pt 0; text-align: center; }
+.value p.name { color: #EEEEEE; font-size: 11.5pt; font-weight: bold; margin: 0 0 6pt 0; text-align: center; }
+.value p.desc { color: #888; font-size: 9.5pt; text-align: center; line-height: 1.4; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="num">02</p>
+  <h1>XP — Os 5 Valores Fundamentais</h1>
+</div>
+<div class="body">
+  <div class="intro">
+    <div class="quote-wrap">
+      <p class="quote">"XP é sobre dar às pessoas o que elas precisam para ter sucesso no trabalho."</p>
+    </div>
+    <p class="by">— Kent Beck</p>
+  </div>
+  <div class="values">
+    <div class="value v1">
+      <p class="icon">💬</p>
+      <p class="name">Communication</p>
+      <p class="desc">Time alinhado é mais rápido que documentação. Conversas frequentes.</p>
+    </div>
+    <div class="value v2">
+      <p class="icon">🎯</p>
+      <p class="name">Simplicity</p>
+      <p class="desc">A solução mais simples que funciona agora. Sem YAGNI.</p>
+    </div>
+    <div class="value v3">
+      <p class="icon">🔄</p>
+      <p class="name">Feedback</p>
+      <p class="desc">Loops curtos. Testes, CI, cliente on-site. Corrigir rápido.</p>
+    </div>
+    <div class="value v4">
+      <p class="icon">🦁</p>
+      <p class="name">Courage</p>
+      <p class="desc">Refatorar, deletar código ruim, dizer que não. Sem medo.</p>
+    </div>
+    <div class="value v5">
+      <p class="icon">🤝</p>
+      <p class="name">Respect</p>
+      <p class="desc">Cada contribuição importa. Ninguém é mais importante que o time.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

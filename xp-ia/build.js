@@ -9,17 +9,23 @@ async function build() {
   pptx.title = 'O Método XP Aplicado com IA';
 
   const slides = [
-    'slide1.html',
-    'slide2.html',
-    'slide3.html',
-    'slide4.html',
-    'slide5.html',
-    'slide6.html',
-    'slide7.html',
-    'slide9.html',
-    'slide10.html',
-    'slide11.html',
-    'slide8.html',
+    'slide1.html',             // Capa
+    'slide_xp_values.html',   // XP 5 Valores
+    'slide_xp_practices.html',// 12 Práticas
+    'slide2.html',             // Pilares core
+    'slide_xp_feedback.html', // Ciclos de Feedback
+    'slide3.html',             // IA entra no loop
+    'slide4.html',             // AI-Assisted Pair
+    'slide5.html',             // TDD com IA
+    'slide6.html',             // Refatoração + Clean Code
+    'slide7.html',             // XP + IA tabela
+    'slide_workflow.html',    // Nosso Workflow
+    'slide_gsd.html',         // GSD
+    'slide_skills.html',      // Skills
+    'slide9.html',             // Live Coding
+    'slide10.html',            // Orquestração
+    'slide11.html',            // Criando um Agente
+    'slide8.html',             // Encerramento
   ];
 
   for (const s of slides) {

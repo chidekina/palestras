@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #222831; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #222831; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header { background: #393E46; padding: 18pt 50pt; display: flex; align-items: center; gap: 14pt; }
+.header h1 { color: #F96D00; font-size: 22pt; margin: 0; }
+.header .num { color: #555; font-size: 13pt; }
+.body { display: flex; flex: 1; padding: 16pt 50pt; gap: 20pt; }
+.col { flex: 1; display: flex; flex-direction: column; gap: 7pt; }
+.col-title { color: #F96D00; font-size: 10pt; font-weight: bold; letter-spacing: 1.5pt; margin: 0 0 6pt 0; }
+.practice {
+  background: #2D333D; border-radius: 5pt; padding: 8pt 12pt;
+  display: flex; align-items: center; gap: 10pt;
+}
+.practice.highlight { background: #3A3010; border: 1pt solid #F96D00; }
+.practice p.icon { font-size: 13pt; margin: 0; min-width: 18pt; }
+.practice-body h4 { color: #EEEEEE; font-size: 11pt; margin: 0; }
+.practice-body p { color: #888; font-size: 9.5pt; margin: 0; line-height: 1.2; }
+.practice.highlight .practice-body h4 { color: #F96D00; }
+.divider { width: 1pt; background: #393E46; margin: 0; }
+.legend { display: flex; align-items: center; gap: 8pt; margin-top: 6pt; }
+.legend-dot { width: 10pt; height: 10pt; border-radius: 2pt; background: #3A3010; border: 1pt solid #F96D00; flex-shrink: 0; }
+.legend p { color: #888; font-size: 9pt; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <p class="num">03</p>
+  <h1>As 12 Práticas do XP</h1>
+</div>
+<div class="body">
+  <div class="col">
+    <p class="col-title">PLANEJAMENTO</p>
+    <div class="practice highlight">
+      <p class="icon">🗺️</p>
+      <div class="practice-body">
+        <h4>Planning Game</h4>
+        <p>Business prioriza, dev estima. Iterações curtas.</p>
+      </div>
+    </div>
+    <div class="practice highlight">
+      <p class="icon">📦</p>
+      <div class="practice-body">
+        <h4>Small Releases</h4>
+        <p>Deploy frequente. Valor entregue a cada sprint.</p>
+      </div>
+    </div>
+    <div class="practice">
+      <p class="icon">🧩</p>
+      <div class="practice-body">
+        <h4>Metaphor</h4>
+        <p>Linguagem compartilhada entre time e cliente.</p>
+      </div>
+    </div>
+    <div class="practice">
+      <p class="icon">🏃</p>
+      <div class="practice-body">
+        <h4>Sustainable Pace</h4>
+        <p>40h/semana. Time cansado erra mais.</p>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="col">
+    <p class="col-title">DESIGN &amp; CÓDIGO</p>
+    <div class="practice">
+      <p class="icon">🎨</p>
+      <div class="practice-body">
+        <h4>Simple Design</h4>
+        <p>Passa nos testes, sem duplicação, mínimo de código.</p>
+      </div>
+    </div>
+    <div class="practice highlight">
+      <p class="icon">🔴</p>
+      <div class="practice-body">
+        <h4>Test-Driven Development</h4>
+        <p>Red → Green → Refactor. Sem exceções.</p>
+      </div>
+    </div>
+    <div class="practice highlight">
+      <p class="icon">♻️</p>
+      <div class="practice-body">
+        <h4>Refactoring</h4>
+        <p>Melhoria contínua sem alterar comportamento.</p>
+      </div>
+    </div>
+    <div class="practice highlight">
+      <p class="icon">👁️</p>
+      <div class="practice-body">
+        <h4>Collective Ownership</h4>
+        <p>Qualquer dev pode alterar qualquer arquivo.</p>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="col">
+    <p class="col-title">EQUIPE &amp; ENTREGA</p>
+    <div class="practice highlight">
+      <p class="icon">👥</p>
+      <div class="practice-body">
+        <h4>Pair Programming</h4>
+        <p>Todo código produtivo: em par.</p>
+      </div>
+    </div>
+    <div class="practice highlight">
+      <p class="icon">⚡</p>
+      <div class="practice-body">
+        <h4>Continuous Integration</h4>
+        <p>Integra várias vezes ao dia. Build sempre verde.</p>
+      </div>
+    </div>
+    <div class="practice">
+      <p class="icon">📏</p>
+      <div class="practice-body">
+        <h4>Coding Standards</h4>
+        <p>Um estilo único para todo o time.</p>
+      </div>
+    </div>
+    <div class="practice">
+      <p class="icon">🙋</p>
+      <div class="practice-body">
+        <h4>On-site Customer</h4>
+        <p>Cliente disponível para perguntas em tempo real.</p>
+      </div>
+    </div>
+    <div class="legend">
+      <div class="legend-dot"></div>
+      <p>Práticas que a IA potencializa diretamente</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
